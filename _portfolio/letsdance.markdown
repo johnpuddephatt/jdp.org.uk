@@ -9,7 +9,7 @@ skills:
 - Flexbox
 - Vanilla JavaScript
 - Bourbon + Neat
-image: letsdance
+image: "/uploads/letsdance.jpg"
 link: http://letsdance.agency
 ---
 

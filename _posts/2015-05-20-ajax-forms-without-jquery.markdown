@@ -1,11 +1,14 @@
 ---
+title: Super simple AJAX forms without jQuery
+date: 2015-05-20 14:19:31 Z
+categories:
+- ajax
 layout: post
-title:  "Super simple AJAX forms without jQuery"
-description: "Formspree + a few lines of JavaScript = great looking forms for static sites."
-date:   2015-05-20 14:19:31
-categories: ajax
+description: Formspree + a few lines of JavaScript = great looking forms for static
+  sites.
 image: email-forms
 ---
+
 Formspree is a great solution for adding forms to static sites. It's super simple, it's free and it works.
 
 At its most simple it's just a case of setting your form action so that your data gets POST-ed to Formspree. Here's the basic example given on the FormSpree site:

@@ -1,11 +1,13 @@
 ---
+title: Add a next / previous post footer in Jekyll
+date: 2015-06-01 14:19:31 Z
+categories:
+- jekyll
 layout: post
-title:  "Add a next / previous post footer in Jekyll"
-description: "Showing a preview of your next and previous posts is easy"
-date:   2015-06-01 14:19:31
-categories: jekyll
+description: Showing a preview of your next and previous posts is easy
 image: next-previous
 ---
+
 A footer showing the user the next and previous posts on a blog or other series of content seems like a pretty common requirement, and it's one that many blog themes come with out of the box.
 
 When trying to do this in Jekyll, searching the documentation took me to the page about pagination and explained how to add next/previous links to a paginator, but that wasn't what I was after.

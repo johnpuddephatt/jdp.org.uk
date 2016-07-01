@@ -1,7 +1,9 @@
 ---
-title:  "Talking Heads"
-leader: "Event site with a Pinterest inspired ’wall of inspiration'."
-date: 2014-01-01 00:00:00
+title: Talking Heads
+date: 2014-01-01 00:00:00 Z
+categories:
+- past
+leader: Event site with a Pinterest inspired ’wall of inspiration'.
 image: yth
-category: past
 ---
+

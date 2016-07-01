@@ -9,7 +9,7 @@ order: 2
     <h1>Some of my work</h1>
     <h3>Recent projects</h3>
 
-    {% assign portfolio_featured = site.portfolio | where:"category","featured" | sort:"date" | reverse %}
+    {% assign portfolio_featured = site.portfolio | where:"categories","featured" | sort:"date" | reverse %}
 
     {% for portfolio in portfolio_featured %}
 
@@ -35,7 +35,7 @@ order: 2
 
     <div class="portfolio-archive">
 
-        {% assign portfolio_past = site.portfolio | where:"category","past" | sort:"date" | reverse %}
+        {% assign portfolio_past = site.portfolio | where:"categories","past" | sort:"date" | reverse %}
 
         {% for portfolio in portfolio_past %}
 

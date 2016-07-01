@@ -8,7 +8,7 @@ description: Snazzy features include a (responsive) interactive floorplan, live 
 skills:
 - Bootstrap
 - Symphony CMS
-image: casacantagallina
+image: "/uploads/casacantagallina.jpg"
 link: http://casacantagallina.com
 ---
 

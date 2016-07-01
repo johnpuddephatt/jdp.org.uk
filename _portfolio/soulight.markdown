@@ -8,7 +8,7 @@ description: Animation plays a big role, but without hitting performance – it'
 skills:
 - Animated SVG
 - Bourbon + Neat
-image: soulight
+image: "/uploads/soulight.jpg"
 link: http://soulightapp.com
 ---
 

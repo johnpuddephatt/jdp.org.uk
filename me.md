@@ -1,9 +1,10 @@
 ---
-layout: page
 title: Me
-permalink: /
+permalink: "/"
+layout: page
 order: 1
 ---
+
 <div class="container">
     <div class="illustration"></div>
     <div class="about-intro">

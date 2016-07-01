@@ -1,7 +1,9 @@
 ---
-title:  "Landlord Awards"
-leader: "Minisite built on the MSL system."
-date: 2011-01-01 00:00:00
+title: Landlord Awards
+date: 2011-01-01 00:00:00 Z
+categories:
+- past
+leader: Minisite built on the MSL system.
 image: lla
-category: past
 ---
+

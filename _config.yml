@@ -13,8 +13,8 @@ collections:
     output: true
 defaults:
 - scope:
-    path: ""
-    type: "portfolio"
+    path: ''
+    type: portfolio
   values:
     title: ""
     group: ""

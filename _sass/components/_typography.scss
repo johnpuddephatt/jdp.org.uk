@@ -1,0 +1,127 @@
+@include font-face("Big John", "../fonts/Big John/Big John");
+@include font-face("Slim Joe", "../fonts/Slim Joe/Slim Joe");
+@include font-face(Museo, "../fonts/Museo/Museo500");
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $header-font-family;
+	line-height: $header-line-height;
+	font-weight: normal;
+	margin: 0;
+	text-rendering: optimizeLegibility; // Fix the character spacing for headings
+
+}
+
+
+h1 {
+	font-size: $h2-font-size;
+	@include media($medium-screen-up) {
+		font-size: $h1-font-size;		
+	}
+	color: $red;
+	display: inline-block;
+	line-height: 4 * $base-spacing;
+	.site-header & {
+		background-color: $orange;
+		font-size: $h3-font-size;
+		@include media($medium-screen-up) {
+			font-size: $h2-font-size;		
+		}
+		padding: 0 1.25 * $base-spacing;
+		span {
+			font-family: "Slim Joe";
+		}
+	}
+	.site-header &, .about-intro & {
+		line-height: 4 * $base-spacing;
+	}
+}
+
+h2 {
+	font-size: $h3-font-size;
+	@include media($medium-screen-up) {
+		font-size: $h2-font-size;		
+	}
+	line-height: 3 * $base-spacing;
+	color: $red;
+	margin: .5 * $base-spacing 0;
+	& a {
+		color: $red;
+		&:hover {
+			color: darken($red,5);
+		}
+	}
+
+}
+
+
+
+
+h3 {
+	font-size: $h3-font-size;
+	line-height: 2 * $base-spacing;
+	margin: 2 * $base-spacing 0 $base-spacing;
+	&:first-child, &.post-meta {
+		margin: $base-spacing 0;
+	}
+}
+
+h4 {
+	font-size: $h4-font-size;
+	line-height: 2 * $base-spacing;
+	color: $red;
+	margin: 2 * $base-spacing 0 $base-spacing;
+	letter-spacing: 0.02rem;
+	& a {
+		color: $red;
+		&:hover {
+			color: darken($red,5);
+		}		
+	}
+}
+
+h5 {
+	font-size: $h5-font-size;
+	margin-bottom: $base-spacing;
+	line-height: 2 * $base-spacing;
+}
+
+
+h6 {
+	font-size: $h6-font-size;
+	font-family: "Slim Joe";
+	font-weight: 400;
+	line-height: 2 * $base-spacing;
+	letter-spacing: 0.05rem;
+	-webkit-font-smoothing: subpixel-antialiased;
+	strong {
+		font-weight: 400;
+		font-family: $header-font-family;
+	}
+}
+
+
+// Nice underlines for text links.
+p a, li > a, h6 a {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, lighten($base-link-color, 10%) 50%);
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 100% 0.15rem;
+    &:hover, &:active, &:focus {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, lighten($hover-link-color, 10%) 50%);
+    }
+}
+
+// Paragraphs. OpenType ligatures and oldstyle figures enabled if available.
+p {
+    font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+}
+
+// Headings. OpenType ligatures, discretionary ligatures and lining figures enabled if available.
+h1, h2, h3, h4, h5, h6 {
+    font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+}

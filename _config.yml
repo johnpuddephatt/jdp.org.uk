@@ -1,0 +1,19 @@
+# Site settings
+title: John Daniel Puddephatt
+email: john@jdp.org.uk
+description: London-based freelance frontend web person and co-founder of Let’s Dance
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://jdp.org.uk" # the base hostname & protocol for your site
+twitter_username: johnpuddephatt
+linkedin_username: "https://uk.linkedin.com/pub/john-puddephatt/16/925/3b7"
+github_username:  jekyll
+
+# Build settings
+markdown: kramdown
+
+# Collections
+collections:
+- portfolio
+
+gems:
+  - octopress-autoprefixer

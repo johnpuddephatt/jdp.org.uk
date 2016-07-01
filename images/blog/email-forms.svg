@@ -1,0 +1,17 @@
+<svg version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="233px" height="243.9px" viewBox="0 0 233 243.9" enable-background="new 0 0 233 243.9"
+	 xml:space="preserve">
+<defs>
+</defs>
+<path fill="#F47D5B" d="M225.8,243.9H7.2c-4,0-7.2-3.2-7.2-7.2V96.3c0-2.1,1-4.2,2.6-5.5L110.5,1.6c2.6-2.2,6.4-2.2,9.1-0.1
+	l110.8,89.2c1.7,1.4,2.7,3.4,2.7,5.6v140.4C233,240.7,229.8,243.9,225.8,243.9z"/>
+<rect x="18.9" y="36.5" fill="#73CBDA" width="196.8" height="131.4"/>
+<rect x="82.9" y="46.7" opacity="0.5" fill="#FFFFFF" width="20.3" height="111.3"/>
+<rect x="109" y="46.7" opacity="0.5" fill="#FFFFFF" width="71.8" height="112.1"/>
+<rect x="185.4" y="46.6" fill="#F47D5B" width="17.8" height="47.8"/>
+<rect x="56.7" y="46.7" opacity="0.5" fill="#FFFFFF" width="20.3" height="111.5"/>
+<rect x="30.6" y="46.7" opacity="0.5" fill="#FFFFFF" width="20.3" height="111.5"/>
+<path fill="#F47D5B" d="M224.3,243.6H8.7c-4.8,0-8.7-3.9-8.7-8.7V108.6c0-6.9,7.7-11.1,13.5-7.3l98.3,63.7c2.9,1.9,6.6,1.9,9.5,0
+	l98.3-63.7c5.8-3.8,13.5,0.4,13.5,7.3v126.2C233,239.7,229.1,243.6,224.3,243.6z"/>
+</svg>

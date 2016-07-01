@@ -1,0 +1,92 @@
+.site-header {
+
+	nav {
+		@include media($large-screen-up) {
+			@include span-columns(6);
+		}
+
+		ul {
+			
+			li {
+				float: left;
+				font-size: $h4-font-size;
+				font-family: $header-font-family;
+				background-color: $red;
+				margin-top: $base-spacing;
+				margin-right: .75 * $base-spacing;
+				line-height: 1.7;
+				transition: 2 * $default-transition;
+				a {
+					background-image: none !important;
+					color: $orange;
+					padding: 0 .75 * $base-spacing;
+					display: block;
+					&:active, &:focus, &:hover {
+						color: lighten($orange, 10);
+						background-image: none !important;
+					}
+
+				}
+				&:hover {
+					transform: translate(0px,0px) scale(1) !important;
+					opacity: 1 !important;
+					box-shadow: transparentize($red,0.5) -5px 5px 0;
+				}
+			}
+			&:hover li {
+				transform: translate(-5px,5px) scale(0.98);
+				opacity: 0.5;
+			}
+		}
+	}
+
+	aside {
+		text-align: right;
+		h6 {
+			display: none;
+			@include media($large-screen-up) {
+				display: block;
+			}
+		}
+
+		@include media($large-screen-up) {
+			@include span-columns(6);
+		}
+
+		.social {
+			margin-bottom: 0; 
+			li {
+				float: right;
+				margin-left: .25 * $base-spacing;
+				@include media($large-screen-up) {
+					margin-left: .5 * $base-spacing;
+				}
+			}
+			svg {
+				height: 2 * $base-spacing;
+				margin: 1.5 * $base-spacing 0 0;
+				padding: 0 * $base-spacing;
+				border: .2rem solid $black;
+				border-radius: 100px;
+				color: $black;
+				fill: $black;
+				transition: $default-transition;
+			}
+
+			a {
+				text-decoration: none;
+				background-image: none !important;
+				&:hover svg {
+					color: $white;
+					fill: $white;
+					background-color: $blue;
+					border-color: $blue;
+					animation: pop 2 * $default-transition;
+					transform: scale(1.06);
+					background-image: none !important;
+				}
+			}
+		}
+	}
+
+}

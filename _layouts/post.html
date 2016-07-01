@@ -1,0 +1,48 @@
+---
+layout: default
+---
+
+<div class="container">
+    <header class="article-header">
+	    {% if page.image %}<img class="post-image" src="/images/blog/{{ page.image }}.svg"/>{% endif %}
+        <div class="post-details">
+	        <h1 class="post-title">{{ page.title }}</h1> 
+		    <h3 class="post-meta">{{ page.date | date: "%d.%m.%y" }}</h3>
+	        <p class="leader">{{ page.description}}</p>
+        </div>
+    </header>
+</div>
+
+<div id="blog">
+    <div class="container">
+        <article class="article-content">
+		    {{ content }}
+	    </article>
+    </div>
+</div>
+
+<nav class="container pagination">
+	<ul>
+	    <li class="pagination-prev">
+	        {% if page.previous %}
+			        <a href="{{ page.previous.url }}" class="prev-button">«</a>
+			        <h4 class="pagination-title"><a href="{{ page.previous.url }}">{{ page.previous.title }}</a></h4>
+					<h5 class="pagination-date">{{ page.previous.date | date: "%d.%m.%y" }}</h5>
+			        <p class="pagination-description">{{ page.previous.description }}</p>
+			{% else %}
+		        &nbsp;
+	        {% endif %}  
+	    </li>
+	    <li class="pagination-next">
+		    {% if page.next %}
+			        <a href="{{ page.next.url }}" class="next-button">»</a>
+			        <h4 class="pagination-title"><a href="{{ page.next.url }}">{{ page.next.title }}</a></h4>
+			        <h5 class="pagination-date">{{ page.next.date | date: "%d.%m.%y" }}</h5>
+			        <p class="pagination-description">{{ page.next.description }}</p>
+	        {% else %}
+		        &nbsp;
+	        {% endif %}  
+	    </li>
+	</ul>
+</nav>
+

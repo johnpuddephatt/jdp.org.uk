@@ -1,0 +1,53 @@
+---
+layout: page
+title: Work
+permalink: /work/
+order: 2
+---
+
+<div class="container">
+    <h1>Some of my work</h1>
+    <h3>Recent projects</h3>
+
+    {% assign portfolio_featured = site.portfolio | where:"category","featured" | sort:"date" | reverse %}
+
+    {% for portfolio in portfolio_featured %}
+
+        <div class="portfolio portfolio--featured">
+            <a class="image-link" href="{{ portfolio.link }}">
+                <img src="/images/portfolio/{{ portfolio.image }}.jpg" />
+            </a>
+            <div class="portfolio-description">
+                <h2>{{ portfolio.title | markdownify | strip_html }}</h2>
+                <p><strong>{{ portfolio.leader | markdownify | strip_html }}</strong></p>
+                <p>{{ portfolio.description | markdownify | strip_html }}</p>
+                <ul class="feature-list">
+                    {% for skills in portfolio.skills %}
+                        <li>{{ skills | markdownify | strip_html }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+    {% endfor %}
+
+    <h3>Blasts from the past</h3>
+
+    <div class="portfolio-archive">
+
+        {% assign portfolio_past = site.portfolio | where:"category","past" | sort:"date" | reverse %}
+
+        {% for portfolio in portfolio_past %}
+
+            <div class="portfolio portfolio--archive">
+                <img src="/images/portfolio/{{ portfolio.image }}.jpg" />
+                <div class="portfolio-description">
+                    <h4>{{ portfolio.title | markdownify | strip_html }}</h4>
+                    <p>{{ portfolio.leader | markdownify | strip_html }}</p>
+                </div>
+            </div>
+
+        {% endfor %}
+
+    </div>
+</div>

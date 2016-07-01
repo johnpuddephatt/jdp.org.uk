@@ -1,0 +1,134 @@
+.portfolio {
+	padding: 0 0 $base-spacing;
+	@include clearfix;
+	@include media($medium-screen-up) {
+		padding: 0 0 2 * $base-spacing;
+	}
+	@include media($large-screen-up) {
+		padding: 2 * $base-spacing 0;
+
+	}
+	img {
+		border: 3px solid $black;
+		display: block;
+		width: 100%;
+		height: auto;
+		border-radius: 5px;
+		padding-top: $base-spacing;
+		background-size: auto $base-spacing;
+		background-color: $white;
+		background-image: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiCgkgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgoJIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTAwMHB4IiBoZWlnaHQ9IjM2cHgiIHZpZXdCb3g9IjAgMCAxMDAwIDM2cHgiCgkgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxkZWZzPgo8L2RlZnM+Cgk8Zz4KCQk8cmVjdCBmaWxsPSIjZmZmZmZmIiB4MT0iMCIgeTE9IjAiIHdpZHRoPSIxMDAwIiBoZWlnaHQ9IjM0IiAvPgoJCTxsaW5lIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzFBMkIzNyIgc3Ryb2tlLXdpZHRoPSIzcHgiIHgxPSIwIiB5MT0iMzUiIHgyPSIxMDAwIiB5Mj0iMzUiLz4KCQk8Y2lyY2xlIGN4PSIyMCIgY3k9IjE3IiByPSI4IiBmaWxsPSIjRjQ3RTVEIiBzdHJva2U9IiMxQTJCMzciIHN0cm9rZS13aWR0aD0iM3B4IiAvPgoJCTxjaXJjbGUgY3g9IjQ1IiBjeT0iMTciIHI9IjgiIGZpbGw9IiNGRkM3NjMiIHN0cm9rZT0iIzFBMkIzNyIgc3Ryb2tlLXdpZHRoPSIzcHgiIC8+CgkJPGNpcmNsZSBjeD0iNzAiIGN5PSIxNyIgcj0iOCIgZmlsbD0iIzg3RDNERiIgc3Ryb2tlPSIjMUEyQjM3IiBzdHJva2Utd2lkdGg9IjNweCIgLz4KCTwvZz4KPC9zdmc+Cg==');
+		background-repeat: no-repeat;
+		background-clip: padding-box;
+		background-position: -5px top;
+		box-shadow: transparentize($black,0.75) (-.5 * $base-spacing) (.5 * $base-spacing) 0;
+		transition: box-shadow $default-transition;
+		@include media($medium-screen-up) {
+			background-position: left top;
+		}
+	}
+
+	&.portfolio--featured {
+		@include media($medium-screen-up) {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		img {
+			padding-top: 2 * $base-spacing;
+			background-size: auto 2 * $base-spacing;
+		}
+		.image-link {
+			position: relative;
+			display: block;
+			margin: $base-spacing 0;
+			@include media($medium-screen-up) {
+				@include span-columns(3);
+			}
+			@include media($large-screen-up) {
+				@include span-columns(4);
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+			&:hover{
+				img {
+					box-shadow: transparent 0 0 0;
+				}
+				&:before, &:after {
+					opacity: 1;
+				}
+			}
+			&:after, &:before {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: absolute;
+				color: $white;
+				top: calc(#{2 * $base-spacing} + 3px);
+				left: 3px;
+				right: 3px;
+				opacity: 0;
+				transition: opacity $default-transition;
+				text-align: center;
+
+			}
+			&:before {
+				bottom: 3px;
+				background-color: transparentize($blue,0.07);
+				border-radius: 0 0 3px 3px;
+				content: 'Visit site';
+				font-family: $header-font-family;
+				font-size: $h3-font-size;
+				padding-top: 20%;
+			}
+			&:after {
+				content: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiCgkgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgoJIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNjIuNXB4IiBoZWlnaHQ9IjYyLjVweCIgdmlld0JveD0iMCAwIDYyLjUgNjIuNSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNjIuNSA2Mi41IgoJIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8ZGVmcz4KPC9kZWZzPgo8ZyBpZD0iZW50ZXJ0YWlubWVudF8xXyI+Cgk8cGF0aCBkPSJNMzEuMyw2Mi41QzE0LDYyLjUsMCw0OC41LDAsMzEuM1MxNCwwLDMxLjMsMHMzMS4zLDE0LDMxLjMsMzEuM0M2Mi41LDQ4LjUsNDguNSw2Mi41LDMxLjMsNjIuNXogTTMxLjMsMS43CgkJQzE1LDEuNywxLjcsMTUsMS43LDMxLjNTMTUsNjAuOCwzMS4zLDYwLjhzMjkuNi0xMy4zLDI5LjYtMjkuNlM0Ny42LDEuNywzMS4zLDEuN3oiLz4KCTxnPgoJCTxwYXRoIGQ9Ik0zNi4zLDUyLjJsMS43LTVsMS45LTEuNmwyLjQtMC4xdjMuNGwtMi40LDMuM0wzNi4zLDUyLjJ6IE0zOS41LDQ4LjFsLTAuNywyLjJoMC40bDEuNi0yLjF2LTEuMWgtMC4xTDM5LjUsNDguMXoiLz4KCQk8cGF0aCBkPSJNMjguMiw1Ny41bC01LjYtOS45bDAuOC0yLjFsLTIuOS01LjdsMC4yLTIuMWwtMi44LTEuOWwtNC4xLDEuNkwxMCwzNC41TDkuNiwyNC4ybDYuMy02LjVoNS44bDMuOCwyLjFsMC40LTEuMmw2LjMsMS4xCgkJCWwwLjQtMC4ybDAuMi0wLjJsLTAuMy0wLjRsLTAuNywwLjFsLTEuOC0wLjRsLTAuNC0yLjFMMjksMTYuOGwtMC42LDEuNGwtMi4xLTAuNEwyNiwxNi40bC0wLjcsMC45aC0zbC0wLjgtMWwtMC4zLTFMMTgsMTcuMWgtMi43CgkJCXYtMy43bDIuOS0xLjJsMC43LTFsMC40LTAuM2wtMC4xLTAuMkwxOCwxMGwxLjMtMS45bDEtMS41bDIuMSwwLjdsMC43LDEuMWwwLjMtMC4xbC0xLjEtMi4ybDQuMy0zLjZIMzFsMC41LDEuM2wxLjYtMC4xTDMzLDQuNAoJCQlsMS42LTAuOUgzN0wzNy42LDNsNC0xbDAuNCwxLjZsLTMuNywxbC0wLjksMC42aC0yLjRMMzIuMiw3TDMxLDYuMUwzMSw1LjZoLTAuN2wtMC41LTEuM2gtMi43bC0yLjgsMi4zbDAuNCwwLjloMC43bDAuMywwLjUKCQkJbDIuNS0xLjNMMjksOC4zbC0zLjksMkgyNWwwLDBsMCwwbC0xLTAuNGwtMS45LDAuN2wtMS0xLjhMMjEsOC43bC0wLjIsMC40bC0wLjMsMC40bDEuMiwxLjlsLTEuNCwxbC0wLjcsMS4zbC0yLjQsMXYwLjhoMC41CgkJCWw0LTIuMmwwLjksMC40bDAuNSwxLjlsMC4xLDAuMWgxLjNsMC4xLTAuMmwwLjItMi4xbDIuNSwxLjFsMC4zLDEuM2wwLjEtMC4ybDEuMy0wLjlsMS4yLTMuNWwxLjksMC42bDEuMy0xLjNMMzcsMTdsLTMuOC0wLjcKCQkJTDMyLDE2LjRsLTAuNiwwLjRsMC4xLDAuMmwwLjQsMC4ybDEuNS0wLjJsMS40LDIuMkwzNCwyMC45bC0xLjQsMC42bC01LjQtMWwtMC43LDEuNmwtNS4xLTIuOGgtNC43bC01LjQsNS40bDAuNCw4LjdsMi40LDEuOAoJCQlsNC4xLTEuNmw0LjQsM2wtMC4yLDIuN2wyLjksNS44bC0wLjcsMi4xbDQuMiw3LjVsNC4yLTMuM2wwLjQtMi45bDIuMi0xLjJsMC43LTEuOWwtMC42LTMuNmwxLjUtMy40bDIuNi0xLjlsMS44LTMuMWwtMi41LDAuMQoJCQlsLTYuMS0xMC40bDAuNC0xLjNIMzdsNC4zLDdsMy44LTIuM2wwLjEtMC42bC0xLjQtMWwtMS4xLDAuMUw0MCwyMi43bDAuOC0xLjZsNC4zLDIuOWgzLjFsMS43LDEuN0w1MSwyNmwzLjYsOC4ybDAuNC0wLjFsMC41LTAuOQoJCQlMNTQuNCwyOWwyLjEtNC40bDIuMSwxLjFsMi4xLDZoMS4xbDAuMSwxLjdsLTIuNCwwLjFsLTIuMi02LjRsLTEsMi4xbDEuMiw0LjNsLTEuMywyLjFsLTIuNCwwLjdsLTQuMy05TDQ4LjcsMjdsLTEuNS0xLjVoLTAuNgoJCQlsLTAuMiwyLjFsLTUuOSwzLjdsLTQuNy03LjZoLTFsNC45LDguM2w0LjUtMC4xbC0zLjQsNi4xbC0yLjQsMS43bC0xLDIuNWwwLjYsMy41bC0xLjEsMi45bC0yLDFsLTAuNCwyLjdMMjguMiw1Ny41eiBNMzEuMywxMy4zCgkJCWwtMC43LDEuOWwwLjYtMC41bDItMC4ybDAuNCwwLjFsLTAuNy0xLjNsLTAuNCwwLjRMMzEuMywxMy4zeiBNNDEuNiwxNy45bC0zLjMtMC44bC0xLjYtMi43bDAuNC0xLjZsMS4zLTEuOWwxLjgsMS4ybDAuNCwxLjkKCQkJTDQxLjYsMTcuOXogTTM4LjcsMTQuMmwwLjcsMS4ybC0wLjItMWwtMC4yLTAuOWwtMC4xLDAuMkwzOC43LDE0LjJ6Ii8+Cgk8L2c+CjwvZz4KPC9zdmc+Cg==");
+				bottom: 20%;
+			}
+
+		}
+		.portfolio-description {
+			@include media($medium-screen-up) {
+				@include span-columns(5);
+			}
+			@include media($large-screen-up) {
+				@include span-columns(6);
+			}
+		}
+		
+	}
+
+	&.portfolio--archive {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		img, .portfolio-description {
+			@include span-columns(4);
+		} 
+		padding-bottom: $base-spacing;
+		@include media($medium-screen-up) {
+			img, .portfolio-description {
+				display: block;
+				float: none;
+				width: 100%;
+			}
+			@include span-columns(4 of 12);
+			padding-bottom: 2 * $base-spacing;
+
+		}
+		@include media($medium-screen-only) {
+			@include omega(3n);
+		}
+		@include media($large-screen-up) {
+			@include span-columns(3);
+			@include omega(4n);
+		}
+	}
+}
+
+.portfolio-archive {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+

@@ -13,10 +13,12 @@ collections:
     output: true
 defaults:
 - scope:
-    path: ''
-    type: portfolio
+    path: ""
+    type: "portfolio"
   values:
-    categories: ''
+    title: ""
+    categories: ""
+    leader: ""
 email: john@jdp.org.uk
 description: London-based freelance frontend web person and co-founder of Let’s Dance
 baseurl: ''

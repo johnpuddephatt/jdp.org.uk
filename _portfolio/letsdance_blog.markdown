@@ -7,7 +7,7 @@ description: Designed to complement the main Let's Dance site but focus on the c
   presentation of content.
 skills:
 - Jekyll + GitHub pages
-image: letsdance-blog
+image: "/uploads/letsdance-blog.jpg"
 link: http://blog.letsdance.agency
 ---
 

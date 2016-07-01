@@ -1,7 +1,7 @@
 ---
 title: Let's Dance Blog
 date: 2015-03-01 00:00:00 Z
-categories:
+group:
 - featured
 test: this
 leader: Modern blog with a nice big header.

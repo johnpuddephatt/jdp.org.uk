@@ -1,7 +1,7 @@
 ---
 title: Let's Dance
 date: 2015-02-01 00:00:00 Z
-categories:
+group:
 - featured
 leader: Single–page agency site designed to make a big impression.
 description: Features full-screen video with overlaid animation yet still weighs in

@@ -1,7 +1,7 @@
 ---
 title: Soulight
 date: 2015-06-01 00:00:00 Z
-categories:
+group:
 - featured
 leader: Peaceful, happy, holistic and friendly mobile app landing page.
 description: Animation plays a big role, but without hitting performance – it's a

@@ -15,7 +15,7 @@ order: 2
 
         <div class="portfolio portfolio--featured">
             <a class="image-link" href="{{ portfolio.link }}">
-                <img src="/images/portfolio/{{ portfolio.image }}.jpg" />
+                <img src="{{ portfolio.image }}" />
             </a>
             <div class="portfolio-description">
                 <h2>{{ portfolio.title | markdownify | strip_html }}</h2>
@@ -40,7 +40,7 @@ order: 2
         {% for portfolio in portfolio_past %}
 
             <div class="portfolio portfolio--archive">
-                <img src="/images/portfolio/{{ portfolio.image }}.jpg" />
+                <img src="{{ portfolio.image }}" />
                 <div class="portfolio-description">
                     <h4>{{ portfolio.title | markdownify | strip_html }}</h4>
                     <p>{{ portfolio.leader | markdownify | strip_html }}</p>

@@ -11,6 +11,12 @@ collections:
   uploads:
     title: Uploads
     output: true
+defaults:
+- scope:
+    path: ''
+    type: portfolio
+  values:
+    categories: ''
 email: john@jdp.org.uk
 description: London-based freelance frontend web person and co-founder of Let’s Dance
 baseurl: ''
